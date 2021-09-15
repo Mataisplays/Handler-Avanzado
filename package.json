@@ -1,0 +1,24 @@
+{
+  "name": "handler-avanzado",
+  "version": "1.0.0",
+  "description": "Un handler avanzado por si el que usas no lo es tanto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ." 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mataisplays/Handler-Avanzado.git"
+  },
+  "author": "Mataisplays",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mataisplays/Handler-Avanzado/issues"
+  },
+  "homepage": "https://github.com/Mataisplays/Handler-Avanzado#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  }
+}
