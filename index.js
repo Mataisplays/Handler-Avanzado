@@ -35,13 +35,13 @@ client.on("messageCreate", async (message) => {
         (c) => c.name === command || (c.alias && c.alias.includes(command))
     );
     if (cmd) {
-        if (!message.member.permissions.has(cmd.permsUser || [])) {
+        if (cmd.permsUser.size > 0 && !message.member.permissions.has(cmd.permsUser)) {
             return message.channel.send(
                 `No tienes permisos para usar el comando ${command}`
             );
         }
 
-        if (!message.guild.me.permissions.has(cmd.permsClient || [])) {
+        if (cmd.permsClient.size > 0 && !message.guild.me.permissions.has(cmd.permsClient)) {
             return message.channel.send(
                 `No tengo el permiso ${cmd.permsClient} para ejecutar el comando **${command}**`
             );
